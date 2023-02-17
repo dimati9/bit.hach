@@ -92,7 +92,6 @@ d {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-
 }
 
 .mail {
@@ -114,6 +113,10 @@ d {
 
 .mail:hover {
     background-color: #e9e7e7;
+}
+
+.mail.old .text b {
+    color: gray;
 }
 
 .checkbox {
