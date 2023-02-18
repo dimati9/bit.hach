@@ -145,12 +145,16 @@ body {
 
     background-repeat: space;
     min-width: 1000px;
+    display: flex;
+    align-items: start;
+    align-content: start;
 }
 
 .bg span {
     font-weight: 600;
     font-size: 30px;
     line-height: 38px;
+    margin-left: 30px;
 }
 
 .blocks {
@@ -304,4 +308,268 @@ body {
 .day.active strong {
     color: #5390EB;
     font-weight: 600;
+}
+
+.quests {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.quest {
+    padding: 24px 24px 32px;
+    border-radius: 30px;
+    width: 409px;
+    height: 267px;
+    position: relative;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    margin-right: 30px;
+    min-height: 267px;
+    margin-bottom: 30px;
+    border: 1px solid #FFFFFF;
+}
+
+.quest:hover {
+    border: 1px solid;
+}
+
+.quest.green {
+    background: #E9FFF3;
+}
+
+.quest.red {
+    background-color: #FEF3F2;
+}
+
+.quest.red h4 {
+    color: #F04438;
+}
+
+.quest h4 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #6941C6;
+    margin-bottom: 24px;
+}
+
+.quest h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.quest p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 361px;
+    color: #667085;
+    margin-bottom: 32px;
+}
+
+.quest .who {
+    display: flex;
+}
+
+.who img {
+    width: 40px;
+    height: 40px;
+}
+
+.who p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.who p strong {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Gray/900 */
+
+    color: #101828;
+}
+
+.quest .wrap {
+    position: absolute;
+    right: 20px;
+}
+
+.generate {
+    margin-left: 32px;
+}
+
+.generate > h4 {
+
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7F56D9;;
+}
+
+.generate h2 {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.generate > span {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #667085;
+}
+
+.search {
+    background: #FFFFFF;
+    /* Gray/300 */
+
+    border: 1px solid #D0D5DD;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+
+    width: 100%;
+    /*height: 44px;*/
+    padding: 10px;
+    padding-left: 42px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+
+    /* Gray/500 */
+
+    color: #667085;
+}
+
+.search-block {
+    margin-top: 40px;
+    position: relative;
+}
+
+.search-block img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.generate > .blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.generate {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.generate.full {
+    width: 100%;
+}
+
+.generate .block {
+    padding: 24px;
+    gap: 24px;
+
+    width: 250px;
+    height: 150px;
+
+
+    border-radius: 8px;
+    margin-right: 20px;
+
+    cursor: pointer;
+}
+
+.generate .block:hover {
+    background: #dbd9d9;
+}
+
+.generate .block h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #42307D;
+}
+
+.generate .block p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: #6941C6;
+}
+
+.generate > img {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.generate  button {
+    width: 160px;
+    height: 40px;
+
+    /* Primary/600 */
+    background: #FFFFFF;
+    /* Gray/300 */
+
+    border: 1px solid #D0D5DD;
+    /* Shadow/xs */
+
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    margin-right: 16px;
+
+    /* Gray/700 */
+
+    color: #344054;
+
+
+    /* White */
+    cursor: pointer;
+
+}
+
+.generate button:hover {
+    background: #b0e2b0;
+}
+
+.generate button.active {
+    background: #7F56D9;
+    /* Primary/600 */
+    color: #FFFFFF;
+    border: 1px solid #7F56D9;
+}
+
+.generate button.active:hover {
+    background: #9572e2;
 }

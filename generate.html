@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Конструктор-документов</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Neucha&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<script>
+    // test TODO
+    // localStorage.setItem("info", 0);
+
+    if(localStorage.getItem("info") != 1) {
+        location.href = "./mail.html";
+    }
+</script>
+<script defer>
+    $(function() {
+        $(".close").on("click", () => {
+            localStorage.setItem("info", "0");
+            location.href = "./index.html";
+        });
+
+        $(".item").on("click", e => {
+            location.href = $(e.target).find("a").attr("href");
+        })
+    });
+</script>
+
+
+<div class="main">
+    <div class="menu">
+        <div class="profile">
+            <span class="name">Ирина Фёдорова</span>
+            <span class="email">irina1978@inbox.ru</span>
+        </div>
+        <div class="items">
+            <div class="item">
+                <img src="./icons/Icon.png" alt="">
+                <a href="./index.html">Главная</a>
+            </div>
+            <div class="item">
+                <img src="./icons/book-open.png" alt="">
+                <a href="#">Учебник</a>
+            </div>
+            <div class="item ">
+                <img src="./icons/server.png" alt="">
+                <a href="./zadachi.html">Задачи</a>
+            </div>
+            <div class="item ">
+                <img src="./icons/calendar.png" alt="">
+                <a href="./calendar.html">Календарь</a>
+            </div>
+            <div class="item">
+                <img src="./icons/users.png" alt="">
+                <a href="#">Контакты сотрудников</a>
+            </div>
+            <div class="item">
+                <img src="./icons/Icon2.png" alt="">
+                <a href="./opros.html">Опрос</a>
+            </div>
+            <div class="item active">
+                <img src="./icons/paperclip.png" alt="">
+                <a href="./generate.html">Конструктор документов</a>
+            </div>
+            <div class="item">
+                <img src="./icons/message-square.png" alt="">
+                <a href="#">Чат-бот</a>
+            </div>
+
+        </div>
+        <a href="#" class="close">
+            Выйти
+        </a>
+    </div>
+    <div class="generate">
+        <h4>Заполни форму в один клик</h4>
+        <h2>Конструктор документов</h2>
+        <span>
+            Выберите шаблон, заполни смарт-опросник,  и внесите реквизиты. Документ готов!
+        </span>
+        <div class="search-block">
+            <input type="text" class="search" placeholder="Поиск">
+            <img src="./icons/search.png" alt="">
+        </div>
+
+        <div class="blocks">
+            <a href="./document.html" class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Выписки</h3>
+                <p>Копия части другого документа</p>
+            </a>
+            <a href="./document.html"  class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Справки</h3>
+                <p>О зарплате, о периоде работы</p>
+            </a>
+            <a href="./document.html"  class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Отчёты</h3>
+                <p>Об условиях труда, о кадрах</p>
+            </a>
+            <a href="./document.html"  class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Протоколы</h3>
+                <p>Для комиссий, президиумов</p>
+            </a>
+            <a href="./document.html"  class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Заявления</h3>
+                <p>Об увольнении, об отпуске</p>
+            </a>
+            <a href="./document.html"  class="block">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="#9E77ED"/>
+                    <path d="M17.3332 9.3335H11.9998C11.6462 9.3335 11.3071 9.47397 11.057 9.72402C10.807 9.97407 10.6665 10.3132 10.6665 10.6668V21.3335C10.6665 21.6871 10.807 22.0263 11.057 22.2763C11.3071 22.5264 11.6462 22.6668 11.9998 22.6668H19.9998C20.3535 22.6668 20.6926 22.5264 20.9426 22.2763C21.1927 22.0263 21.3332 21.6871 21.3332 21.3335V13.3335M17.3332 9.3335L21.3332 13.3335M17.3332 9.3335V13.3335H21.3332M18.6665 16.6668H13.3332M18.6665 19.3335H13.3332M14.6665 14.0002H13.3332" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>Инструкции</h3>
+                <p>По охране труда, должностные</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
