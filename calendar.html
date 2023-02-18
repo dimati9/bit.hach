@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Опрос</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Neucha&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<script>
+    // test TODO
+    // localStorage.setItem("info", 0);
+
+    if(localStorage.getItem("info") != 1) {
+        location.href = "./mail.html";
+    }
+</script>
+<script defer>
+    $(function() {
+        $(".close").on("click", () => {
+            localStorage.setItem("info", "0");
+            location.href = "./index.html";
+        });
+
+        $(".item").on("click", e => {
+            location.href = $(e.target).find("a").attr("href");
+        })
+    });
+</script>
+
+
+<div class="main">
+    <div class="menu">
+        <div class="profile">
+            <span class="name">Ирина Фёдорова</span>
+            <span class="email">irina1978@inbox.ru</span>
+        </div>
+        <div class="items">
+            <div class="item">
+                <img src="./icons/Icon.png" alt="">
+                <a href="./index.html">Главная</a>
+            </div>
+            <div class="item">
+                <img src="./icons/book-open.png" alt="">
+                <a href="#">Учебник</a>
+            </div>
+            <div class="item">
+                <img src="./icons/server.png" alt="">
+                <a href="#">Задачи</a>
+            </div>
+            <div class="item active">
+                <img src="./icons/calendar.png" alt="">
+                <a href="./calendar.html">Календарь</a>
+            </div>
+            <div class="item">
+                <img src="./icons/users.png" alt="">
+                <a href="#">Контакты сотрудников</a>
+            </div>
+            <div class="item">
+                <img src="./icons/Icon2.png" alt="">
+                <a href="./opros.html">Опрос</a>
+            </div>
+            <div class="item">
+                <img src="./icons/paperclip.png" alt="">
+                <a href="#">Документы и материалы</a>
+            </div>
+            <div class="item">
+                <img src="./icons/message-square.png" alt="">
+                <a href="#">Чат-бот</a>
+            </div>
+
+        </div>
+        <a href="#" class="close">
+            Выйти
+        </a>
+    </div>
+    <div class="page">
+        <h2>Календарь</h2>
+        <h4>Ваш календарь</h4>
+
+        <div class="calendar">
+            <div class="day">
+                <span>Ср</span>
+                <strong>8</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+
+            <div class="day">
+                <span>Чт</span>
+                <strong>9</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Пт</span>
+                <strong>10</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Сб</span>
+                <strong>11</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Вс</span>
+                <strong>12</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Пн</span>
+                <strong>13</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Вт</span>
+                <strong>14</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Ср</span>
+                <strong>15</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Чт</span>
+                <strong>16</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Пт</span>
+                <strong>17</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day active">
+                <span>Сб</span>
+                <strong>18</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="day">
+                <span>Вс</span>
+                <strong>19</strong>
+                <div class="border"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

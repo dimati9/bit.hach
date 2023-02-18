@@ -262,3 +262,46 @@ body {
     visibility: visible;
     border: 2px solid white;
 }
+
+.calendar {
+    display: flex;
+    height: 80%;
+    margin-top: 32px;
+    padding-bottom: 30px;
+}
+
+.calendar .day {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.day .border {
+    margin-top: 20px;
+    border: 1px solid #C6CBD3;
+    height: 100%;
+    border-bottom: none;
+}
+
+.day > .left {
+    position: absolute;
+    top: 35px;
+    border: 1px solid #C6CBD3;
+    width: 98px;
+    height: 80%;
+    border-top: none;
+    border-bottom: none;
+}
+
+.day.active span {
+    color: #5390EB;
+    font-weight: 600;
+}
+
+.day.active strong {
+    color: #5390EB;
+    font-weight: 600;
+}
