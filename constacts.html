@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Опрос</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Neucha&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<script>
+    // test TODO
+    // localStorage.setItem("info", 0);
+
+    if(localStorage.getItem("info") != 1) {
+        location.href = "./mail.html";
+    }
+</script>
+<script defer>
+    $(function() {
+        $(".close").on("click", () => {
+            localStorage.setItem("info", "0");
+            location.href = "./index.html";
+        });
+
+        $(".item").on("click", e => {
+            location.href = $(e.target).find("a").attr("href");
+        })
+    });
+</script>
+
+
+<div class="main">
+    <div class="menu">
+        <div class="profile">
+            <span class="name">Ирина Фёдорова</span>
+            <span class="email">irina1978@inbox.ru</span>
+        </div>
+        <div class="items">
+            <div class="item">
+                <img src="./icons/Icon.png" alt="">
+                <a href="./index.html">Главная</a>
+            </div>
+            <div class="item">
+                <img src="./icons/book-open.png" alt="">
+                <a href="#">Учебник</a>
+            </div>
+            <div class="item">
+                <img src="./icons/server.png" alt="">
+                <a href="./zadachi.html">Задачи</a>
+            </div>
+            <div class="item">
+                <img src="./icons/calendar.png" alt="">
+                <a href="./calendar.html">Календарь</a>
+            </div>
+            <div class="item active">
+                <img src="./icons/users.png" alt="">
+                <a href="#">Контакты сотрудников</a>
+            </div>
+            <div class="item">
+                <img src="./icons/Icon2.png" alt="">
+                <a href="./opros.html">Опрос</a>
+            </div>
+            <div class="item">
+                <img src="./icons/paperclip.png" alt="">
+                <a href="./generate.html">Конструктор документов</a>
+            </div>
+            <div class="item">
+                <img src="./icons/message-square.png" alt="">
+                <a href="./chat.html">Чат-бот</a>
+            </div>
+
+        </div>
+        <a href="#" class="close">
+            Выйти
+        </a>
+    </div>
+    <div class="page">
+        <h2>Контакты сотрудников</h2>
+        <h4>Описание о сотрудниках</h4>
+
+        <div class="constacts">
+            <div class="contact header">
+                <input type="checkbox">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>Почта</p>
+                <p>Дата добавления</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+                <div class="contact">
+                    <img src="./icons/Avatar.png" alt="">
+                    <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                    <p>Должность</p>
+                    <p>Название отдела</p>
+                    <p>olivia@untitledui.com</p>
+                    <p>Jan 6, 2022</p>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="contact">
+                <img src="./icons/Avatar.png" alt="">
+                <span>
+                        <strong>Имя Фамилия</strong>
+                        <span>@olivia</span>
+                    </span>
+                <p>Должность</p>
+                <p>Название отдела</p>
+                <p>olivia@untitledui.com</p>
+                <p>Jan 6, 2022</p>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 10.833C10.4603 10.833 10.8334 10.4599 10.8334 9.99967C10.8334 9.53944 10.4603 9.16634 10.0001 9.16634C9.53984 9.16634 9.16675 9.53944 9.16675 9.99967C9.16675 10.4599 9.53984 10.833 10.0001 10.833Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 4.99967C10.4603 4.99967 10.8334 4.62658 10.8334 4.16634C10.8334 3.7061 10.4603 3.33301 10.0001 3.33301C9.53984 3.33301 9.16675 3.7061 9.16675 4.16634C9.16675 4.62658 9.53984 4.99967 10.0001 4.99967Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.0001 16.6663C10.4603 16.6663 10.8334 16.2932 10.8334 15.833C10.8334 15.3728 10.4603 14.9997 10.0001 14.9997C9.53984 14.9997 9.16675 15.3728 9.16675 15.833C9.16675 16.2932 9.53984 16.6663 10.0001 16.6663Z" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

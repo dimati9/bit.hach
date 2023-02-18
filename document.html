@@ -36,6 +36,12 @@
         $(".item").on("click", e => {
             location.href = $(e.target).find("a").attr("href");
         })
+
+        $("#save").click(e => {
+            // $.ajax({url: "./generate.php?name=Dmitriy&city=Miass&need=30.02.2023&date=31.02.2023"});
+            document.location = `./generate.php?name=${$("#name").val()}&city=${$("#city").val()}
+            &need=${$("#need").val()}&date=${$("#date").val()}`;
+        });
     });
 </script>
 
@@ -65,7 +71,7 @@
             </div>
             <div class="item">
                 <img src="./icons/users.png" alt="">
-                <a href="#">Контакты сотрудников</a>
+                <a href="./constacts.html">Контакты сотрудников</a>
             </div>
             <div class="item">
                 <img src="./icons/Icon2.png" alt="">
@@ -77,7 +83,7 @@
             </div>
             <div class="item">
                 <img src="./icons/message-square.png" alt="">
-                <a href="#">Чат-бот</a>
+                <a href="./chat.html">Чат-бот</a>
             </div>
 
         </div>
@@ -85,20 +91,45 @@
             Выйти
         </a>
     </div>
-    <div class="generate full">
+    <div class="page full">
         <h2>Конструктор документов</h2>
         <span>
-            Документы / Папка / Образец заявления 
+            Документы / Заявление на отгул
         </span>
 
-        <img src="./icons/ss.png" alt="">
-        <div class="buttons">
-            <button class="active">Сохранить</button>
-            <button class="">Скачать</button>
-            <button class="">Печать</button>
-            <button class="">Приложения</button>
+        <form class="blocks">
+            <div class="block">
+                <span class="name">Фамилия И.О.</span>
+                <input type="text" placeholder="Иванов И.А." value="Ирина Фёдорова" id="name" required>
+            </div>
+
+            <div class="block">
+                <span class="name">Город</span>
+                <input type="text" placeholder="Челябинск" id="city" required>
+            </div>
+
+            <div class="block">
+                <span class="name">Текущая дата</span>
+                <input type="date" placeholder="19.02.2023" id="date" required>
+            </div>
+
+            <div class="block">
+                <span class="name">Нужная дата отгула</span>
+                <input type="date" placeholder="20.02.2023" id="need" required>
+            </div>
+        </form>
+
+        <div class="generate">
+            <div class="buttons">
+                <button id="save" class="active">Скачать</button>
+                <button class="">Сохранить</button>
+                <button class="">Печать</button>
+                <button class="">Приложения</button>
+            </div>
         </div>
+
     </div>
+
 </div>
 </body>
 </html>

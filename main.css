@@ -189,6 +189,15 @@ body {
     border-bottom: 1px solid #EAECF0;
 }
 
+.block input[type=date] {
+    width: 720px;
+    margin-left: 24px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    border-bottom: 1px solid #EAECF0;
+}
+
 .block input[type=text]:focus {
     border: none;
     outline: none;
@@ -272,6 +281,8 @@ body {
     height: 80%;
     margin-top: 32px;
     padding-bottom: 30px;
+    /*overflow-x: scroll;*/
+    min-width: 1750px;
 }
 
 .calendar .day {
@@ -281,6 +292,106 @@ body {
     height: 100%;
     text-align: center;
     position: relative;
+}
+
+.day:hover {
+    background-color: gray;
+}
+
+
+
+
+.task {
+    cursor: pointer;
+    position: absolute;
+    width: 516px;
+    height: 107px;
+    left: 20px;
+    top: 240px;
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    z-index: 1;
+}
+
+.task.red {
+    background: #FEE4E2;
+    top: 420px;
+}
+
+.task .status {
+    background: #F9F5FF;
+    color: #6941C6;
+}
+
+.task.red .status {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+
+    color: #F37067;
+}
+
+.task.green {
+    background: #E9FFF3;
+    top: 90px;
+}
+
+.task .status {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #F9F5FF;
+    border-radius: 16px;
+    align-items: center;
+    padding: 2px 8px 2px 6px;
+    color: #12B76A;
+}
+
+.task > span {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.task > span h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.task > span p {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    /* Gray/500 */
+    color: #667085;
+}
+
+.task > span > span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    margin-top: 16px;
+
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.task .l {
+    height: 107px;
+    width: 10px;
+    background: #7F56D9;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
 }
 
 .day .border {
@@ -572,4 +683,66 @@ body {
 
 .generate button.active:hover {
     background: #9572e2;
+}
+
+.page > img {
+    max-width: 90%;
+    /*max-height: 100%;*/
+}
+
+.constacts {
+    background: #FFFFFF;
+    /* Gray/200 */
+
+    border: 1px solid #EAECF0;
+    /* Shadow/sm */
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+    border-radius: 8px;
+    height: 827px;
+    margin-top: 48px;
+}
+
+
+
+
+.header input {
+    width: 40px;
+    height: 24px;
+}
+
+
+.contact {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid #EAECF0;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+}
+
+
+.contact span strong {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    /* Gray/900 */
+
+    color: #101828;
+}
+
+.contact > span {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    height: 90%;
 }
