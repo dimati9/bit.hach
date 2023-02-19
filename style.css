@@ -213,3 +213,42 @@ d {
     right: 10px;
     line-height: 30px;
 }
+
+
+@media only screen and (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .text {
+        overflow: hidden;
+    }
+
+    .name > span {
+        overflow-wrap: break-word;
+    }
+    .mail {
+        height: 37px;
+    }
+
+    .name {
+        overflow: hidden;
+        width: 344px;
+        line-height: 20px;
+    }
+
+    .spam {
+        display: none;
+    }
+
+    .date {
+        display: none;
+    }
+}

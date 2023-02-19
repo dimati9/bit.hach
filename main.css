@@ -746,3 +746,85 @@ body {
 .inputs {
     height: 90%;
 }
+
+
+@media only screen and (max-width: 900px) {
+    .menu {
+        width: 10%;
+        min-width: 100px;
+        overflow: hidden;
+    }
+    .item a {
+        width: 1px;
+        overflow: hidden;
+    }
+
+    .profile {
+        padding-left: 20px;
+    }
+    .profile .email {
+        font-size: 8px;
+    }
+
+    .page {
+        width: 71%;
+        margin-left: 25px;
+    }
+
+    .bg {
+        width: 74%;
+        min-width: 0px;
+        font-size: 12px;
+        height: 52px;
+    }
+
+    .bg span {
+        font-size: 15px;
+    }
+
+    .quest {
+        margin-top: 40px;
+        min-height: 332px;
+    }
+
+    .blocks .block {
+        width: 90%;
+    }
+
+    .block input[type=text] {
+        width: 90%;
+    }
+
+    .block > span {
+        width: 90%;
+    }
+
+    .radios {
+        flex-wrap: wrap;
+    }
+
+    .checkboxs {
+        display: none;
+    }
+
+    .generate  h4{
+        font-size: 12px;
+    }
+
+    .generate h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .search {
+        width: 76%
+    }
+
+    .page .chat input {
+        width: 77%;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+}
